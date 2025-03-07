@@ -1,5 +1,5 @@
 import { Table } from 'react-bootstrap';
-import hiraganaData from '../../../../data/Hiragana.json';
+import hiraganaData from '../../../../datas/Hiragana.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const HiraganaContent = () => {

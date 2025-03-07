@@ -1,5 +1,5 @@
 import { Table } from 'react-bootstrap';
-import KatakanaData from '../../../../data/Katakana.json';
+import KatakanaData from '../../../../datas/Katakana.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const KatakanaContent = () => {
