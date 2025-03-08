@@ -10,7 +10,7 @@ const KatakanaContent = () => {
     const thirdColumn = KatakanaData.slice(third * 2);
 
     const renderTable = (data) => (
-        <Table striped bordered hover>
+        <Table striped bordered hover variant="dark">
             <thead className="thead-dark">
                 <tr>
                     <th className='text-center'>Caractères</th>

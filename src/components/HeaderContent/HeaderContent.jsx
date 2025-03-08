@@ -9,7 +9,7 @@ const HeaderContent = () => {
     return (
         <Navbar expand="lg" className="bg-body-tertiary" data-bs-theme="dark">
         <Container>
-            <Navbar.Brand href="home">Japanese E-Learning</Navbar.Brand>
+            <Navbar.Brand href="home" className='text-danger'>Japanese E-Learning</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">

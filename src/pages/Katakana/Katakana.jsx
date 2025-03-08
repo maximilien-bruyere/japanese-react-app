@@ -3,7 +3,7 @@ import KatakanaContent from './components/KatakanaContent.jsx';
 import FooterContent from '../../components/FooterContent/FooterContent';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const Hiragana = () => {
+const Katakana = () => {
 
     return (
         <>
@@ -13,4 +13,4 @@ const Hiragana = () => {
         </>
     );
 };
-export default Hiragana;
+export default Katakana;
