@@ -1,5 +1,5 @@
 {
-    "nouns" : 
+    "Noms communs" : 
     [
         {"japanese" : "いえ","on-yomi" : "","kun-yomi" : "いえ","translation" : "Une maison"},
         {"japanese" : "おい", "on-yomi" : "","kun-yomi": "おい","translation": "Un neveu"},
@@ -50,7 +50,7 @@
         {"japanese" : "", "on-yomi" : "","kun-yomi": "","translation": ""}
     ],
 
-    "proper_nouns" :
+    "Noms propres" :
     [
         {"japanese" : "アメリカ", "on-yomi" : "","kun-yomi": "アメリカ","translation": "L'Amérique"},
         {"japanese" : "ロシヤ", "on-yomi" : "","kun-yomi": "ロシヤ","translation": "La Russie"},
@@ -66,26 +66,26 @@
         {"japanese" : "", "on-yomi" : "","kun-yomi": "","translation": ""}
     ],
 
-    "verbs" : 
+    "Verbes" : 
     [
         {"japanese" : "あう","on-yomi" : "","kun-yomi" : "あう","translation" : "rencontrer"},
         {"japanese" : "いう", "on-yomi" : "","kun-yomi": "いう","translation": "parler, dire"},
         {"japanese" : "ひっと", "on-yomi" : "","kun-yomi": "ひっと","translation": "frapper, toucher"},
-        {"japanese" : "べんきょうします", "on-yomi" : "","kun-yomi": "","translation": "étudier"},
-        {"japanese" : "はたらきます", "on-yomi" : "","kun-yomi": "","translation": "travailler"},
-        {"japanese" : "たべます", "on-yomi" : "","kun-yomi": "","translation": "manger"},
-        {"japanese" : "のみます", "on-yomi" : "","kun-yomi": "","translation": "boire"},
-        {"japanese" : "ねます", "on-yomi" : "","kun-yomi": "","translation": "dormir, aller se coucher"},
-        {"japanese" : "いきます", "on-yomi" : "","kun-yomi": "","translation": "aller"},
-        {"japanese" : "きます", "on-yomi" : "","kun-yomi": "","translation": "venir"},
-        {"japanese" : "かえります", "on-yomi" : "","kun-yomi": "","translation": "rentrer à la maison"},
-        {"japanese" : "でかけます", "on-yomi" : "","kun-yomi": "","translation": "sortir"},
+        {"japanese" : "べんきょうします", "on-yomi" : "","kun-yomi": "べんきょうします","translation": "étudier"},
+        {"japanese" : "はたらきます", "on-yomi" : "","kun-yomi": "はたらきます","translation": "travailler"},
+        {"japanese" : "たべます", "on-yomi" : "","kun-yomi": "たべます","translation": "manger"},
+        {"japanese" : "のみます", "on-yomi" : "","kun-yomi": "のみます","translation": "boire"},
+        {"japanese" : "ねます", "on-yomi" : "","kun-yomi": "ねます","translation": "dormir, aller se coucher"},
+        {"japanese" : "いきます", "on-yomi" : "","kun-yomi": "いきます","translation": "aller"},
+        {"japanese" : "きます", "on-yomi" : "","kun-yomi": "きます","translation": "venir"},
+        {"japanese" : "かえります", "on-yomi" : "","kun-yomi": "かえります","translation": "rentrer à la maison"},
+        {"japanese" : "でかけます", "on-yomi" : "","kun-yomi": "でかけます","translation": "sortir"},
         {"japanese" : "チェック", "on-yomi" : "","kun-yomi": "チェック","translation": "vérifier"},
         {"japanese" : "", "on-yomi" : "","kun-yomi": "","translation": ""},
         {"japanese" : "", "on-yomi" : "","kun-yomi": "","translation": ""}
     ],
 
-    "adverbs" :
+    "Adverbes" :
     [
         {"japanese" : "ここ", "on-yomi" : "","kun-yomi": "ここ","translation": "Ici"},
         {"japanese" : "きのう", "on-yomi" : "","kun-yomi": "","translation": "Hier"},
@@ -100,7 +100,7 @@
         {"japanese" : "", "on-yomi" : "","kun-yomi": "","translation": ""}
     ],
 
-    "adjectives" :
+    "Adjectifs" :
     [
         {"japanese" : "うえ", "on-yomi" : "","kun-yomi": "うえ","translation": "plus haut, ci-dessus"},
         {"japanese" : "びじん", "on-yomi" : "","kun-yomi": "びじん","translation": "beau, belle"},
@@ -119,7 +119,7 @@
         {"japanese" : "", "on-yomi" : "","kun-yomi": "","translation": ""}
     ],
     
-    "numbers" :
+    "Nombres" :
     [
         {"japanese" : "", "on-yomi" : "","kun-yomi": "","translation": ""},
         {"japanese" : "", "on-yomi" : "","kun-yomi": "","translation": ""},
@@ -143,7 +143,7 @@
         {"japanese" : "", "on-yomi" : "","kun-yomi": "","translation": ""}
     ],
 
-    "common_phrases" :
+    "Expressions communes" :
     [
         {"japanese" : "おはよう", "on-yomi" : "","kun-yomi": "おはよう","translation": "Bonjour (avant midi)"},
         {"japanese" : "こんにちは)", "on-yomi" : "","kun-yomi": "","translation": "Bonjour (à partir de midi)"},
@@ -166,7 +166,7 @@
         {"japanese" : "", "on-yomi" : "","kun-yomi": "","translation": ""}
     ],
 
-    "particles" :
+    "Particule" :
     [
         {"japanese" : "か", "on-yomi" : "","kun-yomi": "","translation": "(particule qui indique une question)"},
         {"japanese" : "", "on-yomi" : "","kun-yomi": "","translation": ""},
@@ -182,7 +182,7 @@
         {"japanese" : "", "on-yomi" : "","kun-yomi": "","translation": ""}
     ],
 
-    "polites_phrases" :
+    "Expressions polies" :
     [
         {"japanese" : "おはようございます", "on-yomi" : "","kun-yomi": "","translation": "Bonjour (avant midi)"},
         {"japanese" : "さようなら", "on-yomi" : "","kun-yomi": "","translation": "Au revoir"},
