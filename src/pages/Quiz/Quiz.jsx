@@ -4,8 +4,6 @@ import HeaderContent from '../../components/HeaderContent/HeaderContent';
 const Quiz = () => {
     return (
         <>
-            <HeaderContent />
-            <FooterContent />
         </>
     );
 };

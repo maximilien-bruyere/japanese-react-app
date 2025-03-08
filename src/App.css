@@ -3,6 +3,12 @@ html, body {
     margin: 0;
 }
 
+.body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Hauteur minimale de 100% de la hauteur de la fenêtre */
+}
+
 .d-flex {
     display: flex;
 }
@@ -20,9 +26,9 @@ html, body {
 }
 
 .table-hover tbody tr:hover {
-    cursor:pointer
+    cursor: pointer;
 }
 
-h3-vocabulary:first-child {
+.h3-vocabulary:first-child {
     margin: 100px 0 0 0;
 }

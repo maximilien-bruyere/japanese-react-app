@@ -1,14 +1,10 @@
-import FooterContent from '../../components/FooterContent/FooterContent';
-import HeaderContent from '../../components/HeaderContent/HeaderContent';
 import VocabulaireContent from './components/VocabulaireContent';
 
 const Vocabulaire = () => {
     return (
-        <>
-            <HeaderContent />
+        <div className="d-flex flex-column min-vh-100">
             <VocabulaireContent />
-            <FooterContent />
-        </>
+        </div>
     );
 };
 

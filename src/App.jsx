@@ -8,25 +8,30 @@ import Vocabulaire from './pages/Vocabulaire/Vocabulaire.jsx';
 import Quiz from './pages/Quiz/Quiz.jsx';
 import Contact from './pages/Contact/Contact.jsx';
 import NotFound from './pages/NotFound/NotFound.jsx';
+import HeaderContent from './components/HeaderContent/HeaderContent.jsx';
+import FooterContent from './components/FooterContent/FooterContent.jsx';
 
 function App() {
-
     return (
-        <BrowserRouter>
-            <Routes>
-                <Route path="/" element={<Accueil />} />
-                <Route path="/home" element={<Accueil />} />
-
-                <Route path="/hiragana" element={<Hiragana />} />
-                <Route path="/katakana" element={<Katakana />} />
-                <Route path="/quiz" element={<Quiz />} />
-                <Route path="/vocabulaire" element={<Vocabulaire />} />
-                <Route path="/contact" element={<Contact />} />
-
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-        </BrowserRouter>
+        <div className="body d-flex flex-column min-vh-100">
+            <HeaderContent />
+            <div className="flex-grow-1">
+                <BrowserRouter>
+                    <Routes>
+                        <Route path="/" element={<Accueil />} />
+                        <Route path="/home" element={<Accueil />} />
+                        <Route path="/hiragana" element={<Hiragana />} />
+                        <Route path="/katakana" element={<Katakana />} />
+                        <Route path="/quiz" element={<Quiz />} />
+                        <Route path="/vocabulaire" element={<Vocabulaire />} />
+                        <Route path="/contact" element={<Contact />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
+                </BrowserRouter>
+            </div>
+            <FooterContent />
+        </div>
     );
-};
+}
 
-export default App
+export default App;

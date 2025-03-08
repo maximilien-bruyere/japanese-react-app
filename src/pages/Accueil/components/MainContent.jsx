@@ -5,7 +5,7 @@ import Button from 'react-bootstrap/Button';
 
 const MainContent = () => {
     return (
-        <Container className="flex-grow-1 mt-5">
+        <Container className="flex-grow-1 mt-5 body">
             <Row className="text-center">
                 <Col>
                     <h1>Bienvenue sur Japanese E-Learning</h1>

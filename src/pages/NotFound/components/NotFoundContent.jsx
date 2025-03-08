@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NotFoundContent = () => {
     return(
+    <div className='body'>
     <Alert variant="danger">
         <Alert.Heading>Une erreur s&apos;est produite !</Alert.Heading>
         <p>Impossible de trouver cette page.</p>
@@ -10,6 +11,7 @@ const NotFoundContent = () => {
             <p>Cliquez sur le lien</p>
         </Link>
     </Alert>
+    </div>
     );
 }
 

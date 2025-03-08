@@ -29,7 +29,7 @@ const KatakanaContent = () => {
     );
 
     return (
-        <div className="container mt-4">
+        <div className="container mt-4 body">
             <div className="row">
                 <div className="col-12">
                     <h2 className="text-center mb-4">Katakana</h2>
