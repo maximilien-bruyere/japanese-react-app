@@ -1,14 +1,16 @@
 import { useState, useEffect } from 'react';
 import { Form, Button, Col, Row } from 'react-bootstrap';
 
-const VocabulaireForm = ({ onAddWord, selectedWord, onUpdateWord }) => {
+const VocabulaireForm = (props) => {
     const [word, setWord] = useState({ japanese: '', onYomi: '', kunYomi: '', translation: '' });
 
     useEffect(() => {
-        if (selectedWord) {
-            setWord(selectedWord);
+        if (props.selectedWord) {
+            setWord(props.selectedWord);
+        } else {
+            setWord({ japanese: '', onYomi: '', kunYomi: '', translation: '' });
         }
-    }, [selectedWord]);
+    }, [props.selectedWord, props.key]);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
@@ -17,10 +19,10 @@ const VocabulaireForm = ({ onAddWord, selectedWord, onUpdateWord }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (selectedWord) {
-            onUpdateWord(word);
+        if (props.selectedWord) {
+            props.onUpdateWord(word);
         } else {
-            onAddWord(word);
+            props.onAddWord(word);
         }
         setWord({ japanese: '', onYomi: '', kunYomi: '', translation: '' });
     };
@@ -54,7 +56,7 @@ const VocabulaireForm = ({ onAddWord, selectedWord, onUpdateWord }) => {
                 </Col>
             </Row>
             <Button variant="secondary" type="submit" className="mt-3">
-                {selectedWord ? 'Modifier' : 'Ajouter'}
+                {props.selectedWord ? 'Modifier' : 'Ajouter'}
             </Button>
         </Form>
     );

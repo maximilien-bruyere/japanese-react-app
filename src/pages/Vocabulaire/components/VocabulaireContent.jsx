@@ -6,7 +6,7 @@ import { Container, Row, Col, Alert } from 'react-bootstrap';
 
 const VocabulaireContent = () => {
     const [vocabulaire, setVocabulaire] = useState({});
-    const [selectedCategory, setSelectedCategory] = useState('');
+    const [selectedCategory, setSelectedCategory] = useState('Noms communs');
     const [selectedWord, setSelectedWord] = useState(null);
     const [error, setError] = useState(null);
 
@@ -56,6 +56,7 @@ const VocabulaireContent = () => {
 
     const handleEditWord = (word) => {
         setSelectedWord(word);
+        scrollToTop();
     };
 
     const handleUpdateWord = async (updatedWord) => {
@@ -100,6 +101,10 @@ const VocabulaireContent = () => {
         }
     };
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     return (
         <Container>
             <Row>
@@ -114,10 +119,11 @@ const VocabulaireContent = () => {
                                 onAddWord={handleAddWord}
                                 selectedWord={selectedWord}
                                 onUpdateWord={handleUpdateWord}
+                                key={selectedCategory} // Ajout de la clé pour réinitialiser le formulaire
                             />
                             {error && <Alert variant="danger">{error}</Alert>}
                             <VocabulaireTable
-                                words={vocabulaire[selectedCategory]}
+                                words={vocabulaire[selectedCategory] || []}
                                 onEditWord={handleEditWord}
                                 onDeleteWord={handleDeleteWord}
                             />
