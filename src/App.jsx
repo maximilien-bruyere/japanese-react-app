@@ -1,4 +1,5 @@
 import './App.css';
+import { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import Accueil from './pages/Accueil/Accueil.jsx';
@@ -11,10 +12,34 @@ import NotFound from './pages/NotFound/NotFound.jsx';
 import HeaderContent from './components/HeaderContent/HeaderContent.jsx';
 import FooterContent from './components/FooterContent/FooterContent.jsx';
 
+import vocabulaireData from './../backend/datas/JapaneseWords.json'; // Importer les données JSON
+
 function App() {
+    const [vocabulaire, setVocabulaire] = useState([]);
+
+    useEffect(() => {
+        setVocabulaire(vocabulaireData); // Charger les données JSON dans l'état
+    }, []);
+
+    const handleSearch = (query) => {
+        if (query) {
+            const lowerCaseQuery = query.toLowerCase();
+            const filteredResults = [];
+            for (const category in vocabulaire) {
+                const filteredCategory = vocabulaire[category].filter(word =>
+                    word.japanese.toLowerCase().includes(lowerCaseQuery) || word.translation.toLowerCase().includes(lowerCaseQuery)
+                );
+                filteredResults.push(...filteredCategory);
+            }
+            return filteredResults;
+        } else {
+            return [];
+        }
+    };
+
     return (
         <div className="body d-flex flex-column min-vh-100">
-            <HeaderContent />
+            <HeaderContent onSearch={handleSearch} />
             <div className="flex-grow-1">
                 <BrowserRouter>
                     <Routes>
