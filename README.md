@@ -29,9 +29,12 @@ This project will contain my first Japanese Web/Mobile Application. Designed to 
 ## Features (planned) 🚧
 
 - [x] 📖 Integrated dictionaries: Hiragana, Katakana, Kanji and vocabulary as JSON files, directly accessible within the application.
-- [x] ⚡ 100% standalone application: no external server required, everything runs locally via the browser.
-- [ ] 🎨 Responsive interface: Developed with React, offering fluid, intuitive navigation.
+- [x] ⚡ 100% Standalone application: no external server required, everything runs locally via the browser.
 - [x] 🔍 Quick search: Instant access to words and characters thanks to a dynamic filtering system.
+- [ ] 🎓 Learn theory: Access theoretical sections to learn new concepts
+- [ ] ❔ Quiz: Practice with the vocabulary given as well as your own.
+- [ ] 🎨 Responsive interface: Developed with React, offering fluid, intuitive navigation.
+- [ ] 📱 Mobile App: Enable users to use the application on their phone
 
 ## Author(s) 👦
 
