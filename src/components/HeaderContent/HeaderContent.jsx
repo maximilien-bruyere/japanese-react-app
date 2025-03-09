@@ -8,7 +8,7 @@ import Form from 'react-bootstrap/Form';
 import Dropdown from 'react-bootstrap/Dropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const HeaderContent = ({ onSearch }) => {
+const HeaderContent = ( props ) => {
     const [searchQuery, setSearchQuery] = useState('');
     const [searchResults, setSearchResults] = useState([]);
 
@@ -18,7 +18,7 @@ const HeaderContent = ({ onSearch }) => {
 
     const handleSearchSubmit = (event) => {
         event.preventDefault();
-        const results = onSearch(searchQuery);
+        const results = props.onSearch(searchQuery);
         setSearchResults(results);
     };
 
