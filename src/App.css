@@ -32,3 +32,24 @@ html, body {
 .h3-vocabulary:first-child {
     margin: 100px 0 0 0;
 }
+
+.navigation-header {
+    margin: 0 0 0 200px;
+}
+
+.custom-form-control:focus {
+    border-color: #b4b4b4 !important;
+    box-shadow: 0 0 0 .25rem rgba(81, 81, 81, 0.25) !important;
+}
+
+.no-border-radius {
+    border-radius: 0 !important;
+}
+
+.no-border-radius:first-of-type {
+    border-bottom-left-radius: 8px !important;
+}
+
+.no-border-radius:last-of-type {
+    border-bottom-right-radius: 8px !important;
+}
