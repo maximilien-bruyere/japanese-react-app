@@ -328,6 +328,14 @@
     }
   ],
   "Nombres": [],
+  "Particules": [
+    {
+      "japanese": "か",
+      "onYomi": "-",
+      "kunYomi": "-",
+      "translation": "(particule qui indique une question)"
+    }
+  ],
   "Expressions communes": [
     {
       "japanese": "おはよう",
@@ -352,14 +360,6 @@
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Salut, à plus"
-    }
-  ],
-  "Particules": [
-    {
-      "japanese": "か",
-      "onYomi": "-",
-      "kunYomi": "-",
-      "translation": "(particule qui indique une question)"
     }
   ],
   "Expressions polies": [
