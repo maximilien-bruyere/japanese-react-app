@@ -32,25 +32,25 @@ const VocabulaireForm = (props) => {
             <Row>
                 <Col>
                     <Form.Group controlId="formJapanese">
-                        <Form.Label>Japanese</Form.Label>
+                        <Form.Label>Mot japonais</Form.Label>
                         <Form.Control type="text" name="japanese" value={word.japanese} onChange={handleChange} required />
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group controlId="formOnYomi">
-                        <Form.Label>On-yomi</Form.Label>
+                        <Form.Label>Onyomi</Form.Label>
                         <Form.Control type="text" name="onYomi" value={word.onYomi} onChange={handleChange} />
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group controlId="formKunYomi">
-                        <Form.Label>Kun-yomi</Form.Label>
+                        <Form.Label>Kunyomi</Form.Label>
                         <Form.Control type="text" name="kunYomi" value={word.kunYomi} onChange={handleChange} />
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group controlId="formTranslation">
-                        <Form.Label>Translation</Form.Label>
+                        <Form.Label>Traduction</Form.Label>
                         <Form.Control type="text" name="translation" value={word.translation} onChange={handleChange} required />
                     </Form.Group>
                 </Col>

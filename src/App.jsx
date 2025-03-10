@@ -9,6 +9,8 @@ import Vocabulaire from './pages/Vocabulaire/Vocabulaire.jsx';
 import Quiz from './pages/Quiz/Quiz.jsx';
 import Contact from './pages/Contact/Contact.jsx';
 import NotFound from './pages/NotFound/NotFound.jsx';
+import Ressources from './pages/Ressources/Ressources.jsx';
+import Theorie from './pages/Theorie/Theorie.jsx';
 import HeaderContent from './components/HeaderContent/HeaderContent.jsx';
 import FooterContent from './components/FooterContent/FooterContent.jsx';
 
@@ -50,6 +52,8 @@ function App() {
                         <Route path="/quiz" element={<Quiz />} />
                         <Route path="/vocabulaire" element={<Vocabulaire />} />
                         <Route path="/contact" element={<Contact />} />
+                        <Route path="/theorie" element={<Theorie />} />
+                        <Route path="/ressources" element={<Ressources />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
                 </BrowserRouter>

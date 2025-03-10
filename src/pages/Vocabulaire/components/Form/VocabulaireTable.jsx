@@ -7,10 +7,10 @@ const VocabulaireTable = (props) => {
         <Table striped bordered hover variant="dark">
             <thead>
                 <tr>
-                    <th>Japanese</th>
-                    <th>On-yomi</th>
-                    <th>Kun-yomi</th>
-                    <th>Translation</th>
+                    <th>Mots japonais</th>
+                    <th>Onyomi</th>
+                    <th>Kunyomi</th>
+                    <th>Traductions</th>
                     <th>Actions</th>
                 </tr>
             </thead>
