@@ -119,7 +119,7 @@ const VocabulaireContent = () => {
                                 onAddWord={handleAddWord}
                                 selectedWord={selectedWord}
                                 onUpdateWord={handleUpdateWord}
-                                key={selectedCategory} // Ajout de la clé pour réinitialiser le formulaire
+                                key={selectedCategory}
                             />
                             {error && <Alert variant="danger">{error}</Alert>}
                             <VocabulaireTable

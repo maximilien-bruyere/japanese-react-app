@@ -1,12 +1,6 @@
 {
   "Noms communs": [
     {
-      "japanese": "いえ",
-      "onYomi": "-",
-      "kunYomi": "-",
-      "translation": "Une maison"
-    },
-    {
       "japanese": "おい",
       "onYomi": "-",
       "kunYomi": "-",
@@ -373,7 +367,7 @@
       "japanese": "さようなら",
       "onYomi": "-",
       "kunYomi": "-",
-      "translation": "Au revoir"
+      "translation": "Au revoir (adieu)"
     }
   ]
 }

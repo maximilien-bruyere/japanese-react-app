@@ -22,17 +22,30 @@ const VocabulaireButtons = (props) => {
             onChange={handleSelect}
             className="mb-3"
         >
-            {props.categories.map((category, index) => (
+            {props.categories.map((category, index) => {
+
+                const isFirstOfType = index === 0;
+                const isEndOfType = index === props.categories.length - 1;
+
+                return (
+
                 <ToggleButton
                     key={index}
                     id={`category-${index}`}
                     value={category}
                     variant="secondary"
-                    className='no-border-radius'
+                    style={{
+                        transition: 'background-color 0.35s ease',
+                        borderRadius: '0',
+                        borderBottomLeftRadius: isFirstOfType ? '8px' : '0',
+                        borderBottomRightRadius: isEndOfType ? '8px' : '0'
+                    }}
                 >
                     {category}
                 </ToggleButton>
-            ))}
+                );
+            })}
+            
         </ToggleButtonGroup>
     );
 };

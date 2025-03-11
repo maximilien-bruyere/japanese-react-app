@@ -7,7 +7,6 @@ import Hiragana from './pages/Hiragana/Hiragana.jsx';
 import Katakana from './pages/Katakana/Katakana.jsx';
 import Vocabulaire from './pages/Vocabulaire/Vocabulaire.jsx';
 import Quiz from './pages/Quiz/Quiz.jsx';
-import Contact from './pages/Contact/Contact.jsx';
 import NotFound from './pages/NotFound/NotFound.jsx';
 import Ressources from './pages/Ressources/Ressources.jsx';
 import Theorie from './pages/Theorie/Theorie.jsx';
@@ -51,9 +50,8 @@ function App() {
                         <Route path="/katakana" element={<Katakana />} />
                         <Route path="/quiz" element={<Quiz />} />
                         <Route path="/vocabulaire" element={<Vocabulaire />} />
-                        <Route path="/contact" element={<Contact />} />
-                        <Route path="/theorie" element={<Theorie />} />
                         <Route path="/ressources" element={<Ressources />} />
+                        <Route path="/theorie" element={<Theorie />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
                 </BrowserRouter>

@@ -1,11 +1,9 @@
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+import React from 'react';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 
-const MainContent = () => {
+const Accueil = () => {
     return (
-        <Container className="flex-grow-1 mt-5 body">
+        <Container fluid className="mt-5">
             <Row className="text-center">
                 <Col>
                     <h1>Bienvenue sur Japanese E-Learning</h1>
@@ -34,4 +32,4 @@ const MainContent = () => {
     );
 };
 
-export default MainContent; 
+export default Accueil;
