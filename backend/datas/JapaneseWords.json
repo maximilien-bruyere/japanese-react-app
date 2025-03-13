@@ -1,162 +1,189 @@
 {
   "Noms communs": [
     {
+      "id": 1,
       "japanese": "おい",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Un neveu"
     },
     {
+      "id": 2,
       "japanese": "きん",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "L'or"
     },
     {
+      "id": 3,
       "japanese": "おんな",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Une femme, une madame"
     },
     {
+      "id": 4,
       "japanese": "おんがく",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Une musique, une chanson"
     },
     {
+      "id": 5,
       "japanese": "バス",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Un bus"
     },
     {
+      "id": 6,
       "japanese": "バイク",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Une moto"
     },
     {
+      "id": 7,
       "japanese": "フライドポテト",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Une frite"
     },
     {
+      "id": 8,
       "japanese": "はなぢ",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Le saignement du nez"
     },
     {
+      "id": 9,
       "japanese": "ひづけ",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Une date du calendrier"
     },
     {
+      "id": 10,
       "japanese": "にぎりすし",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Nigiri sushi (plat)"
     },
     {
+      "id": 11,
       "japanese": "ひと",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Une personne"
     },
     {
+      "id": 12,
       "japanese": "トラック",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Un camion"
     },
     {
+      "id": 13,
       "japanese": "ざっし",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Un magazine"
     },
     {
+      "id": 14,
       "japanese": "カップ",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Une tasse"
     },
     {
+      "id": 15,
       "japanese": "こうこう",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Une école secondaire (17+)"
     },
     {
+      "id": 16,
       "japanese": "がくせい",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Un étudiant"
     },
     {
+      "id": 17,
       "japanese": "せんせい",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Un professeur"
     },
     {
+      "id": 18,
       "japanese": "おかあさん",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Une maman"
     },
     {
+      "id": 19,
       "japanese": "ツアー",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Une tour"
     },
     {
+      "id": 20,
       "japanese": "メール",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Un email"
     },
     {
+      "id": 21,
       "japanese": "ケーキ",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Un gâteau, cake"
     },
     {
+      "id": 22,
       "japanese": "パーテイ",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Une fête"
     },
     {
+      "id": 23,
       "japanese": "ソファ",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Un sofa"
     },
     {
+      "id": 24,
       "japanese": "チェス",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Les échecs (jeu)"
     },
     {
+      "id": 25,
       "japanese": "ファストフード",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Un fast food"
     },
     {
+      "id": 26,
       "japanese": "プロジェクト",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Un projet"
     },
     {
+      "id": 27,
       "japanese": "ウォッカ",
       "onYomi": "-",
       "kunYomi": "-",
@@ -165,24 +192,28 @@
   ],
   "Noms propres": [
     {
+      "id": 1,
       "japanese": "アメリカ",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "L'Amérique"
     },
     {
+      "id": 2,
       "japanese": "ロシヤ",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "La Russie"
     },
     {
+      "id": 3,
       "japanese": "ふじさん",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Le Mont Fuji"
     },
     {
+      "id": 4,
       "japanese": "ウィンドウズ",
       "onYomi": "-",
       "kunYomi": "-",
@@ -191,78 +222,91 @@
   ],
   "Verbes": [
     {
+      "id": 1,
       "japanese": "あう",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "rencontrer"
     },
     {
+      "id": 2,
       "japanese": "いう",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "parler, dire"
     },
     {
+      "id": 3,
       "japanese": "ひっと",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "frapper, toucher"
     },
     {
+      "id": 4,
       "japanese": "べんきょうします",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "étudier"
     },
     {
+      "id": 5,
       "japanese": "はたらきます",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "travailler"
     },
     {
+      "id": 6,
       "japanese": "たべます",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "manger"
     },
     {
+      "id": 7,
       "japanese": "のみます",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "boire"
     },
     {
+      "id": 8,
       "japanese": "ねます",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "dormir, aller se coucher"
     },
     {
+      "id": 9,
       "japanese": "いきます",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "aller"
     },
     {
+      "id": 10,
       "japanese": "きます",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "venir"
     },
     {
+      "id": 11,
       "japanese": "かえります",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "rentrer à la maison"
     },
     {
+      "id": 12,
       "japanese": "でかけます",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "sortir"
     },
     {
+      "id": 13,
       "japanese": "チェック",
       "onYomi": "-",
       "kunYomi": "-",
@@ -271,36 +315,42 @@
   ],
   "Adverbes": [
     {
+      "id": 1,
       "japanese": "ここ",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Ici"
     },
     {
+      "id": 2,
       "japanese": "きのう",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Hier"
     },
     {
+      "id": 3,
       "japanese": "きょう",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Aujourd'hui"
     },
     {
+      "id": 4,
       "japanese": "あした",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Demain"
     },
     {
+      "id": 5,
       "japanese": "はい",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Oui"
     },
     {
+      "id": 6,
       "japanese": "いいえ",
       "onYomi": "-",
       "kunYomi": "-",
@@ -309,21 +359,31 @@
   ],
   "Adjectifs": [
     {
+      "id": 1,
       "japanese": "うえ",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "plus haut, ci-dessus"
     },
     {
+      "id": 2,
       "japanese": "びじん",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "beau, belle"
+    },
+    {
+      "id": 3,
+      "japanese": "a",
+      "onYomi": "a",
+      "kunYomi": "a",
+      "translation": "a"
     }
   ],
   "Nombres": [],
   "Particules": [
     {
+      "id": 1,
       "japanese": "か",
       "onYomi": "-",
       "kunYomi": "-",
@@ -332,24 +392,28 @@
   ],
   "Expressions communes": [
     {
+      "id": 1,
       "japanese": "おはよう",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Bonjour (avant midi)"
     },
     {
+      "id": 2,
       "japanese": "こんにちは",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Bonjour (à partir de midi)"
     },
     {
+      "id": 3,
       "japanese": "こんばんは",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Bonsoir"
     },
     {
+      "id": 4,
       "japanese": "じゃね",
       "onYomi": "-",
       "kunYomi": "-",
@@ -358,12 +422,14 @@
   ],
   "Expressions polies": [
     {
+      "id": 1,
       "japanese": "おはようございます",
       "onYomi": "-",
       "kunYomi": "-",
       "translation": "Bonjour (avant midi)"
     },
     {
+      "id": 2,
       "japanese": "さようなら",
       "onYomi": "-",
       "kunYomi": "-",

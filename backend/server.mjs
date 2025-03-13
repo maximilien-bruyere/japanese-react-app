@@ -37,6 +37,7 @@ app.post('/api/vocabulaire/:category', (req, res) => {
         }
 
         const vocabulaire = JSON.parse(data);
+        newWord.id = vocabulaire[category].length ? vocabulaire[category][vocabulaire[category].length - 1].id + 1 : 1;
         vocabulaire[category].push(newWord);
 
         fs.writeFile(DATA_FILE, JSON.stringify(vocabulaire, null, 2), (err) => {
@@ -49,9 +50,9 @@ app.post('/api/vocabulaire/:category', (req, res) => {
 });
 
 // Route pour mettre à jour un mot de vocabulaire
-app.put('/api/vocabulaire/:category/:japanese', (req, res) => {
+app.put('/api/vocabulaire/:category/:id', (req, res) => {
     const category = req.params.category;
-    const japanese = req.params.japanese;
+    const id = parseInt(req.params.id, 10);
     const updatedWord = req.body;
 
     fs.readFile(DATA_FILE, 'utf8', (err, data) => {
@@ -60,14 +61,24 @@ app.put('/api/vocabulaire/:category/:japanese', (req, res) => {
         }
 
         const vocabulaire = JSON.parse(data);
-        const index = vocabulaire[category].findIndex(word => word.japanese === japanese);
 
+        // Vérifie que la catégorie existe
+        if (!vocabulaire[category]) {
+            return res.status(404).json({ error: 'Catégorie non trouvée.' });
+        }
+
+        // Trouve l'index du mot à mettre à jour
+        const index = vocabulaire[category].findIndex(word => word.id === id);
+
+        // Vérifie que le mot existe
         if (index === -1) {
             return res.status(404).json({ error: 'Mot non trouvé.' });
         }
 
+        // Met à jour le mot
         vocabulaire[category][index] = updatedWord;
 
+        // Écrit les données mises à jour dans le fichier
         fs.writeFile(DATA_FILE, JSON.stringify(vocabulaire, null, 2), (err) => {
             if (err) {
                 return res.status(500).json({ error: 'Erreur lors de l\'écriture du fichier.' });
@@ -78,9 +89,9 @@ app.put('/api/vocabulaire/:category/:japanese', (req, res) => {
 });
 
 // Route pour supprimer un mot de vocabulaire
-app.delete('/api/vocabulaire/:category/:japanese', (req, res) => {
+app.delete('/api/vocabulaire/:category/:id', (req, res) => {
     const category = req.params.category;
-    const japanese = req.params.japanese;
+    const id = parseInt(req.params.id, 10);
 
     fs.readFile(DATA_FILE, 'utf8', (err, data) => {
         if (err) {
@@ -88,14 +99,24 @@ app.delete('/api/vocabulaire/:category/:japanese', (req, res) => {
         }
 
         const vocabulaire = JSON.parse(data);
-        const index = vocabulaire[category].findIndex(word => word.japanese === japanese);
 
+        // Vérifie que la catégorie existe
+        if (!vocabulaire[category]) {
+            return res.status(404).json({ error: 'Catégorie non trouvée.' });
+        }
+
+        // Trouve l'index du mot à supprimer
+        const index = vocabulaire[category].findIndex(word => word.id === id);
+
+        // Vérifie que le mot existe
         if (index === -1) {
             return res.status(404).json({ error: 'Mot non trouvé.' });
         }
 
+        // Supprime le mot
         vocabulaire[category].splice(index, 1);
 
+        // Écrit les données mises à jour dans le fichier
         fs.writeFile(DATA_FILE, JSON.stringify(vocabulaire, null, 2), (err) => {
             if (err) {
                 return res.status(500).json({ error: 'Erreur lors de l\'écriture du fichier.' });
