@@ -10,9 +10,10 @@
     "preview": "vite preview",
     "start": "concurrently \"npm run backend\" \"npm run frontend\"",
     "backend": "cd backend && node server.mjs",
-    "frontend": "npm run dev -- --host --port 4000"
+    "frontend": "npm run dev -- --port 4000"
   },
   "dependencies": {
+    "axios": "^1.8.3",
     "body-parser": "^1.20.3",
     "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
