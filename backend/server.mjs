@@ -4,10 +4,9 @@ import cors from 'cors';
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+const __dirname = path.dirname(__filename);
 
 const app = express();
 const PORT = 5000;
@@ -16,24 +15,38 @@ const DATA_FILE = path.join(__dirname, 'datas', 'JapaneseWords.json');
 app.use(cors());
 app.use(bodyParser.json());
 
-// Route pour obtenir toutes les catégories de vocabulaire
+/**
+ * Get all categories of vocabulary words.
+ * 
+ * @route GET /api/vocabulaire
+ * @returns {Object} 200 - An array of vocabulary categories
+ * @returns {Error}  500 - Error reading the file
+ */
 app.get('/api/vocabulaire', (req, res) => {
     fs.readFile(DATA_FILE, 'utf8', (err, data) => {
         if (err) {
-            return res.status(500).json({ error: 'Erreur lors de la lecture du fichier.' });
+            return res.status(500).json({ error: 'Error reading the file.' });
         }
         res.json(JSON.parse(data));
     });
 });
 
-// Route pour ajouter un mot de vocabulaire
+/**
+ * Add new words to a specific category.
+ * 
+ * @route POST /api/vocabulaire/:category
+ * @param {string} category - The category to which the word will be added
+ * @param {Object} newWord - The new word to add
+ * @returns {Object} 201 - The newly added word
+ * @returns {Error}  500 - Error reading or writing the file
+ */
 app.post('/api/vocabulaire/:category', (req, res) => {
     const category = req.params.category;
     const newWord = req.body;
 
     fs.readFile(DATA_FILE, 'utf8', (err, data) => {
         if (err) {
-            return res.status(500).json({ error: 'Erreur lors de la lecture du fichier.' });
+            return res.status(500).json({ error: 'Error reading the file.' });
         }
 
         const vocabulaire = JSON.parse(data);
@@ -42,14 +55,24 @@ app.post('/api/vocabulaire/:category', (req, res) => {
 
         fs.writeFile(DATA_FILE, JSON.stringify(vocabulaire, null, 2), (err) => {
             if (err) {
-                return res.status(500).json({ error: 'Erreur lors de l\'écriture du fichier.' });
+                return res.status(500).json({ error: 'Error writing the file.' });
             }
             res.status(201).json(newWord);
         });
     });
 });
 
-// Route pour mettre à jour un mot de vocabulaire
+/**
+ * Modify an existing word in a specific category.
+ * 
+ * @route PUT /api/vocabulaire/:category/:id
+ * @param {string} category - The category of the word to modify
+ * @param {number} id - The ID of the word to modify
+ * @param {Object} updatedWord - The updated word data
+ * @returns {Object} 200 - The updated word
+ * @returns {Error}  404 - Category or word not found
+ * @returns {Error}  500 - Error reading or writing the file
+ */
 app.put('/api/vocabulaire/:category/:id', (req, res) => {
     const category = req.params.category;
     const id = parseInt(req.params.id, 10);
@@ -57,75 +80,77 @@ app.put('/api/vocabulaire/:category/:id', (req, res) => {
 
     fs.readFile(DATA_FILE, 'utf8', (err, data) => {
         if (err) {
-            return res.status(500).json({ error: 'Erreur lors de la lecture du fichier.' });
+            return res.status(500).json({ error: 'Error reading the file.' });
         }
 
         const vocabulaire = JSON.parse(data);
 
-        // Vérifie que la catégorie existe
         if (!vocabulaire[category]) {
-            return res.status(404).json({ error: 'Catégorie non trouvée.' });
+            return res.status(404).json({ error: 'Category not found.' });
         }
 
-        // Trouve l'index du mot à mettre à jour
         const index = vocabulaire[category].findIndex(word => word.id === id);
 
-        // Vérifie que le mot existe
         if (index === -1) {
-            return res.status(404).json({ error: 'Mot non trouvé.' });
+            return res.status(404).json({ error: 'Word not found.' });
         }
 
-        // Met à jour le mot
         vocabulaire[category][index] = updatedWord;
 
-        // Écrit les données mises à jour dans le fichier
         fs.writeFile(DATA_FILE, JSON.stringify(vocabulaire, null, 2), (err) => {
             if (err) {
-                return res.status(500).json({ error: 'Erreur lors de l\'écriture du fichier.' });
+                return res.status(500).json({ error: 'Error writing the file.' });
             }
             res.json(updatedWord);
         });
     });
 });
 
-// Route pour supprimer un mot de vocabulaire
+/**
+ * Delete a word from a specific category.
+ * 
+ * @route DELETE /api/vocabulaire/:category/:id
+ * @param {string} category - The category of the word to delete
+ * @param {number} id - The ID of the word to delete
+ * @returns {null} 204 - No content
+ * @returns {Error}  404 - Category or word not found
+ * @returns {Error}  500 - Error reading or writing the file
+ */
 app.delete('/api/vocabulaire/:category/:id', (req, res) => {
     const category = req.params.category;
     const id = parseInt(req.params.id, 10);
 
     fs.readFile(DATA_FILE, 'utf8', (err, data) => {
         if (err) {
-            return res.status(500).json({ error: 'Erreur lors de la lecture du fichier.' });
+            return res.status(500).json({ error: 'Error reading the file.' });
         }
 
         const vocabulaire = JSON.parse(data);
 
-        // Vérifie que la catégorie existe
         if (!vocabulaire[category]) {
-            return res.status(404).json({ error: 'Catégorie non trouvée.' });
+            return res.status(404).json({ error: 'Category not found.' });
         }
 
-        // Trouve l'index du mot à supprimer
         const index = vocabulaire[category].findIndex(word => word.id === id);
 
-        // Vérifie que le mot existe
         if (index === -1) {
-            return res.status(404).json({ error: 'Mot non trouvé.' });
+            return res.status(404).json({ error: 'Word not found.' });
         }
 
-        // Supprime le mot
         vocabulaire[category].splice(index, 1);
 
-        // Écrit les données mises à jour dans le fichier
         fs.writeFile(DATA_FILE, JSON.stringify(vocabulaire, null, 2), (err) => {
             if (err) {
-                return res.status(500).json({ error: 'Erreur lors de l\'écriture du fichier.' });
+                return res.status(500).json({ error: 'Error writing the file.' });
             }
             res.status(204).end();
         });
     });
 });
 
+/**
+ * Start the server and listen on the specified port.
+ */
 app.listen(PORT, () => {
-    console.log(`Serveur démarré sur le port ${PORT}`);
+    console.log(`Server started on port ${PORT}`);
 });
