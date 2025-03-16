@@ -1,4 +1,7 @@
 import { useState } from 'react';
+import { HiAcademicCap } from "react-icons/hi2";
+import { FaQuestion } from "react-icons/fa";
+import { TbVocabulary } from "react-icons/tb";
 
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
@@ -45,12 +48,12 @@ const HeaderContent = (props) => {
                         <Nav.Link style={{transition: 'color 0.5s ease'}} href="ressources">Ressources</Nav.Link>
 
                         <NavDropdown style={{transition: 'color 0.5s ease'}} title="Apprentissage" id="basic-nav-dropdown">
-                            <NavDropdown.Item style={{transition: 'background-color 0.5s ease'}} href="hiragana">Hiragana</NavDropdown.Item>
-                            <NavDropdown.Item style={{transition: 'background-color 0.5s ease'}} href="katakana">Katakana</NavDropdown.Item>
-                            <NavDropdown.Item style={{transition: 'background-color 0.5s ease'}} href="vocabulaire">Vocabulaire</NavDropdown.Item>
+                            <NavDropdown.Item style={{transition: 'background-color 0.5s ease', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}} href="hiragana"><span style={{padding: '0 5px 0 0'}}>Hiragana</span>あ</NavDropdown.Item>
+                            <NavDropdown.Item style={{transition: 'background-color 0.5s ease', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}} href="katakana"><span style={{padding: '0 5px 0 0'}}>Katakana</span>ア</NavDropdown.Item>
+                            <NavDropdown.Item style={{transition: 'background-color 0.5s ease', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}} href="vocabulaire"><span style={{padding: '0 5px 0 0'}}>Vocabulaire</span><TbVocabulary /></NavDropdown.Item>
                             <NavDropdown.Divider />
-                            <NavDropdown.Item style={{transition: 'background-color 0.5s ease'}} href="theorie">Théorie</NavDropdown.Item>
-                            <NavDropdown.Item style={{transition: 'background-color 0.5s ease'}} href="quiz">Quiz</NavDropdown.Item>
+                            <NavDropdown.Item style={{transition: 'background-color 0.5s ease', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}} href="theorie"><span style={{padding: '0 5px 0 0'}}>Théorie</span><HiAcademicCap /></NavDropdown.Item>
+                            <NavDropdown.Item style={{transition: 'background-color 0.5s ease', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}} href="quiz"><span style={{padding: '0 5px 0 0'}}>Quiz</span><FaQuestion /></NavDropdown.Item>
                         </NavDropdown>
                     </Nav>
                     <Form className="d-flex position-relative" onSubmit={handleSearchSubmit}>
