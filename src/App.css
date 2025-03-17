@@ -36,3 +36,150 @@ html, body {
 .navigation-header {
     margin: 0 0 0 200px;
 }
+
+/*
+    HEADER COMPONENT
+*/
+
+.custom-navbar-padding { padding: 8px 45px 8px 0 !important; }
+
+.custom-navbar-brand-padding { padding: 0 0 0 20px !important; }
+
+.custom-nav-transition { transition: color 0.5s ease !important; }
+
+.custom-navdropdown-style 
+{
+    transition: background-color 0.5s ease !important;
+    display: flex !important;
+    align-items: center !important; 
+    justify-content: space-between !important;
+}
+
+.custom-navdropdown-style:active 
+{
+    transition: background-color 0.5s ease !important;
+    background-color: #6d747d !important;
+}
+
+.custom-span-padding { padding: 0 5px 0 0 !important; }
+
+#custom-flex-nav
+{
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    margin: 20px 0 0 0 !important;
+    justify-content: space-between !important;
+}
+
+.custom-form-bordercolor 
+{ 
+    border-color: #4e4e4e !important; 
+    transition: border-color 0.35s ease !important;
+}
+
+.custom-form-bordercolor:focus
+{
+    transition: border-color 0.35s ease !important;
+    border-color: #b4b4b4 !important;
+    box-shadow: none !important;
+}
+
+.custom-search-header-button 
+{
+    transition: background-color 0.5s ease !important;
+    color: #ffffff !important;
+    border-color: #a2a2a2 !important;
+    background-color: #2a3135 !important;
+}
+
+.custom-search-header-button:hover
+{
+    transition: background-color 0.5s ease !important;
+    background-color: #4a565d !important;
+}   
+
+.custom-search-header-button:active 
+{
+    transition: background-color 0.2s ease !important;
+    background-color: #6d747d !important;  
+}
+
+@media (max-width: 991.98px)
+{
+    .custom-navbar
+    {
+        display: flex !important;
+        flex-wrap: row nowrap !important;
+        align-items: center !important;
+    }
+    .custom-navbar-brand-padding
+    {
+        padding: 0 0 0 50px !important;
+    }
+
+    .custom-nav 
+    {
+        margin: 0 !important;
+        width: 40% !important;
+        display: flex !important;
+        flex-direction: row !important;
+    }
+    .me-auto.custom-nav
+    {
+        margin-right: 0 !important;
+        width: auto !important;
+    }
+   
+    .d-flex.position-relative.custom-form
+    {
+        width: auto !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+
+    .custom-nav-style
+    {
+        padding: 5px 10px !important;
+    }
+
+    .custom-nav-style:first-child
+    {
+        padding: 5px 10px 5px 50px !important;
+    }
+
+    .custom-nav-style a
+    {
+        margin: 0 0 10px 0 !important;
+    }
+
+    .custom-navdropdown-style
+    {
+        padding: 5px 20px !important; 
+    }
+
+    #basic-nav-dropdown
+    {
+        padding: 0 !important; 
+    }
+
+    .custom-form 
+    {
+        width: 60% !important;
+    }
+
+    #custom-flex-nav
+    {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: flex-start !important;
+        margin: 20px 0 0 0;
+        justify-content: space-between;
+    }
+
+    .dropdown-menu 
+    {
+        position: absolute !important;
+    }
+
+}
